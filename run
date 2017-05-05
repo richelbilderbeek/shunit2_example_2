@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. my_functions
+
+read my_password
+
+if [[ `is_password $my_password` == 1 ]]; then
+  echo "Welcome master"
+else
+  echo "Incorrect password"
+fi

@@ -1,10 +1,15 @@
-#! /bin/sh
+#!/bin/bash
 
-# First example from https://github.com/kward/shunit2
+. my_functions
 
-testEquality()
+test_is_password_incorrect()
 {
-    assertEquals 1 1
+    assertEquals `is_password welcome01` 0
+}
+
+test_is_password_correct()
+{
+    assertEquals `is_password iloverichel` 1
 }
 
 # load shunit2
